@@ -98,7 +98,7 @@
           <text>&lt; 20000</text>
         </inputEntry>
         <inputEntry id="_01C34BB7-9111-4631-A554-50B9BC768EA3">
-          <text>[550..700)</text>
+          <text>[550..700]</text>
         </inputEntry>
         <inputEntry id="_10641837-CD21-4798-89F1-231FCBB0C6DF">
           <text>&gt;= 18</text>
@@ -118,7 +118,7 @@
           <text>&gt;= 20000</text>
         </inputEntry>
         <inputEntry id="_14EA559C-CE4F-478F-9F2E-F748C426A0B6">
-          <text>[550..700)</text>
+          <text>[550..700]</text>
         </inputEntry>
         <inputEntry id="_AD2B4B87-3A7F-4D3D-BF9C-0ACE5DCC3317">
           <text>&gt;= 18</text>
@@ -138,7 +138,7 @@
           <text>-</text>
         </inputEntry>
         <inputEntry id="_3BBB4310-4703-472A-B8B0-D4438997FBAF">
-          <text>&gt;= 700</text>
+          <text>&gt; 700</text>
         </inputEntry>
         <inputEntry id="_A2580FCF-4A03-44ED-A1CC-70256695AD9F">
           <text>&gt;= 18</text>
@@ -179,7 +179,7 @@
       <requiredDecision href="#_45C1272A-23DD-4B0E-8784-71D71EA1FBDC" />
     </informationRequirement>
     <literalExpression id="_E7164B4C-59D6-412F-BD38-12B652662D1B" typeRef="string" label="IsEligible">
-      <text>if Eligibility Score Calculation &lt; 20 then &quot;rejected&quot;
+      <text>if Eligibility Score Calculation &lt; 40 then &quot;manual&quot;
 else if Eligibility Score Calculation &lt; 60 then &quot;manual&quot;
 else &quot;approved&quot;</text>
     </literalExpression>

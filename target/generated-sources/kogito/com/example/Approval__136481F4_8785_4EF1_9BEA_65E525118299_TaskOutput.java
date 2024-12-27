@@ -18,16 +18,23 @@
  */
 package com.example;
 
-import org.kie.kogito.process.workitem.TaskModel;
+import java.util.HashMap;
+import java.util.Map;
+import org.kie.kogito.MapOutput;
+import org.kie.kogito.UserTask;
 
-public class Approval_TaskModelFactory {
+@UserTask(taskName = "Task", processName = "approval")
+public class Approval__136481F4_8785_4EF1_9BEA_65E525118299_TaskOutput implements MapOutput {
 
-    public static TaskModel from(org.kie.kogito.process.WorkItem workItem) {
-        switch(workItem.getNodeId().toExternalFormat()) {
-            case "_136481F4-8785-4EF1-9BEA-65E525118299":
-                return Approval__136481F4_8785_4EF1_9BEA_65E525118299_TaskModel.from(workItem);
-            default:
-                throw new IllegalArgumentException("Invalid task name for work item " + workItem);
-        }
+    @Override
+    public Map<String, Object> toMap() {
+        Map<String, Object> params = new HashMap<>();
+        return params;
+    }
+
+    public static Approval__136481F4_8785_4EF1_9BEA_65E525118299_TaskOutput fromMap(Map<String, Object> params) {
+        com.example.Approval__136481F4_8785_4EF1_9BEA_65E525118299_TaskOutput result = new Approval__136481F4_8785_4EF1_9BEA_65E525118299_TaskOutput();
+        return result;
     }
 }
+//Task output for user task 'Review Application' in process 'approval'
