@@ -173,6 +173,7 @@
     </decisionTable>
   </decision>
   <decision name="IsEligible" id="_65DFDCC7-0B7E-4D5B-BA70-726BBEAB22F3">
+    <description>Allen Version</description>
     <variable name="IsEligible" id="_B4256071-2CC6-4FBF-8B0D-5E7CC8E69CA3" typeRef="string" />
     <informationRequirement id="_45C0F101-4E19-41CB-95C3-78032E0F979E">
       <requiredDecision href="#_45C1272A-23DD-4B0E-8784-71D71EA1FBDC" />
