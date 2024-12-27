@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_d8ahAKZfED2oTNDym-qnug" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_sjW8QKZfED2q254pMQTffw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_approvalItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_applicantItem" structureRef="org.acme.cc_approval.model.Applicant"/>
   <bpmn2:itemDefinition id="_creditCardItem" structureRef="org.acme.cc_approval.model.CreditCard"/>
@@ -35,8 +35,8 @@
       <bpmn2:outMessageRef>_55E44BFD-93D1-4A12-94B2-7CFEFE0D6E09_OutMessage</bpmn2:outMessageRef>
     </bpmn2:operation>
   </bpmn2:interface>
-  <bpmn2:collaboration id="_EFF2A522-59A3-453F-96D2-6708AD80C3FD" name="Default Collaboration">
-    <bpmn2:participant id="_A780B8A7-394D-480D-A919-D8406B4EFFF5" name="Pool Participant" processRef="approval"/>
+  <bpmn2:collaboration id="_B9E4B001-F335-4251-8BE7-8716D9BD9B25" name="Default Collaboration">
+    <bpmn2:participant id="_A6EA1BC3-4465-494C-9C01-1DF971394A0B" name="Pool Participant" processRef="approval"/>
   </bpmn2:collaboration>
   <bpmn2:process id="approval" drools:packageName="com.example" drools:version="1.0" drools:adHoc="false" name="approval" isExecutable="true" processType="Public">
     <bpmn2:property id="approval" itemSubjectRef="_approvalItem" name="approval">
@@ -60,15 +60,6 @@
         </drools:metaData>
       </bpmn2:extensionElements>
     </bpmn2:property>
-    <bpmn2:sequenceFlow id="_6C7298EE-4A73-4CE6-813A-40EFA7F2853F" name="approved" sourceRef="_1B358012-BEE8-48E1-8618-C7A5A07E141C" targetRef="_091906AC-C013-4CE7-9D43-1F85EEA0E780">
-      <bpmn2:extensionElements>
-        <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[approved]]></drools:metaValue>
-        </drools:metaData>
-      </bpmn2:extensionElements>
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" language="http://www.java.com/java"><![CDATA[return approval.toLowerCase().equals("approved");
-]]></bpmn2:conditionExpression>
-    </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="_B3CAF3CC-7CF8-4A6E-8631-3B28F1D1230D" name="rejected" sourceRef="_1B358012-BEE8-48E1-8618-C7A5A07E141C" targetRef="_6BBD4095-A2B3-41D4-AE02-C12148D65E75">
       <bpmn2:extensionElements>
         <drools:metaData name="isAutoConnection.target">
@@ -81,6 +72,15 @@
       <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" language="http://www.java.com/java"><![CDATA[return approval.toLowerCase().equals("rejected");
 ]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_6C7298EE-4A73-4CE6-813A-40EFA7F2853F" name="approved" sourceRef="_1B358012-BEE8-48E1-8618-C7A5A07E141C" targetRef="_091906AC-C013-4CE7-9D43-1F85EEA0E780">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[approved]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" language="http://www.java.com/java"><![CDATA[return approval.toLowerCase().equals("approved");
+]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="_26B16130-7E94-4DB5-A4FB-2027DB4E42FC" name="Manual review" sourceRef="_136481F4-8785-4EF1-9BEA-65E525118299" targetRef="_1B358012-BEE8-48E1-8618-C7A5A07E141C">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
@@ -88,13 +88,13 @@
         </drools:metaData>
       </bpmn2:extensionElements>
     </bpmn2:sequenceFlow>
-    <bpmn2:sequenceFlow id="_51AA3A41-4FDE-417E-88F0-9004507060A6" name="Automatic approval" sourceRef="_C2482C78-5643-4A50-B124-66C736288F25" targetRef="_091906AC-C013-4CE7-9D43-1F85EEA0E780">
+    <bpmn2:sequenceFlow id="_6CE29E93-66F0-4BCC-BB8D-542FEA441582" name="Rejected" sourceRef="_C2482C78-5643-4A50-B124-66C736288F25" targetRef="_CD7CFF95-8D92-4F42-A794-04399EDE0CE0">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[Automatic approval]]></drools:metaValue>
+          <drools:metaValue><![CDATA[Rejected]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" language="http://www.java.com/java"><![CDATA[return approval.toLowerCase().equals("approved");
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" language="http://www.java.com/java"><![CDATA[return approval.toLowerCase().equals("rejected");
 ]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="_9A47DC27-D2DE-42FA-A24F-77A44094D3FA" name="Manual review" sourceRef="_C2482C78-5643-4A50-B124-66C736288F25" targetRef="_136481F4-8785-4EF1-9BEA-65E525118299">
@@ -106,13 +106,13 @@
       <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" language="http://www.java.com/java"><![CDATA[return approval.toLowerCase().equals("manual");
 ]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
-    <bpmn2:sequenceFlow id="_6CE29E93-66F0-4BCC-BB8D-542FEA441582" name="Rejected" sourceRef="_C2482C78-5643-4A50-B124-66C736288F25" targetRef="_CD7CFF95-8D92-4F42-A794-04399EDE0CE0">
+    <bpmn2:sequenceFlow id="_51AA3A41-4FDE-417E-88F0-9004507060A6" name="Automatic approval" sourceRef="_C2482C78-5643-4A50-B124-66C736288F25" targetRef="_091906AC-C013-4CE7-9D43-1F85EEA0E780">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[Rejected]]></drools:metaValue>
+          <drools:metaValue><![CDATA[Automatic approval]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" language="http://www.java.com/java"><![CDATA[return approval.toLowerCase().equals("rejected");
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" language="http://www.java.com/java"><![CDATA[return approval.toLowerCase().equals("approved");
 ]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="_FF61B345-9962-4470-A7FA-AC90444B240E" sourceRef="_CD629077-F96D-4F05-9E10-8D3618A65A0C" targetRef="_C2482C78-5643-4A50-B124-66C736288F25"/>
@@ -130,8 +130,8 @@
     </bpmn2:exclusiveGateway>
     <bpmn2:exclusiveGateway id="_1B358012-BEE8-48E1-8618-C7A5A07E141C" drools:dg="_B3CAF3CC-7CF8-4A6E-8631-3B28F1D1230D" gatewayDirection="Diverging" default="_B3CAF3CC-7CF8-4A6E-8631-3B28F1D1230D">
       <bpmn2:incoming>_26B16130-7E94-4DB5-A4FB-2027DB4E42FC</bpmn2:incoming>
-      <bpmn2:outgoing>_B3CAF3CC-7CF8-4A6E-8631-3B28F1D1230D</bpmn2:outgoing>
       <bpmn2:outgoing>_6C7298EE-4A73-4CE6-813A-40EFA7F2853F</bpmn2:outgoing>
+      <bpmn2:outgoing>_B3CAF3CC-7CF8-4A6E-8631-3B28F1D1230D</bpmn2:outgoing>
     </bpmn2:exclusiveGateway>
     <bpmn2:userTask id="_136481F4-8785-4EF1-9BEA-65E525118299" name="Review Application">
       <bpmn2:extensionElements>
@@ -177,8 +177,8 @@
         <bpmn2:sourceRef>_136481F4-8785-4EF1-9BEA-65E525118299_approvalOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>approval</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:potentialOwner id="_d8gnoKZfED2oTNDym-qnug">
-        <bpmn2:resourceAssignmentExpression id="_d8gnoaZfED2oTNDym-qnug">
+      <bpmn2:potentialOwner id="_sjeRAKZfED2q254pMQTffw">
+        <bpmn2:resourceAssignmentExpression id="_sjeRAaZfED2q254pMQTffw">
           <bpmn2:formalExpression>jdoe</bpmn2:formalExpression>
         </bpmn2:resourceAssignmentExpression>
       </bpmn2:potentialOwner>
@@ -188,9 +188,9 @@
     </bpmn2:endEvent>
     <bpmn2:exclusiveGateway id="_C2482C78-5643-4A50-B124-66C736288F25" drools:dg="_9A47DC27-D2DE-42FA-A24F-77A44094D3FA" gatewayDirection="Diverging" default="_9A47DC27-D2DE-42FA-A24F-77A44094D3FA">
       <bpmn2:incoming>_FF61B345-9962-4470-A7FA-AC90444B240E</bpmn2:incoming>
-      <bpmn2:outgoing>_6CE29E93-66F0-4BCC-BB8D-542FEA441582</bpmn2:outgoing>
-      <bpmn2:outgoing>_9A47DC27-D2DE-42FA-A24F-77A44094D3FA</bpmn2:outgoing>
       <bpmn2:outgoing>_51AA3A41-4FDE-417E-88F0-9004507060A6</bpmn2:outgoing>
+      <bpmn2:outgoing>_9A47DC27-D2DE-42FA-A24F-77A44094D3FA</bpmn2:outgoing>
+      <bpmn2:outgoing>_6CE29E93-66F0-4BCC-BB8D-542FEA441582</bpmn2:outgoing>
     </bpmn2:exclusiveGateway>
     <bpmn2:businessRuleTask id="_CD629077-F96D-4F05-9E10-8D3618A65A0C" name="Is Eligible" implementation="http://www.jboss.org/drools/dmn">
       <bpmn2:extensionElements>
@@ -361,10 +361,10 @@
         <di:waypoint x="627" y="495"/>
         <di:waypoint x="793" y="495"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="edge_shape__C2482C78-5643-4A50-B124-66C736288F25_to_shape__CD7CFF95-8D92-4F42-A794-04399EDE0CE0" bpmnElement="_6CE29E93-66F0-4BCC-BB8D-542FEA441582">
-        <di:waypoint x="793" y="523"/>
-        <di:waypoint x="793" y="680.9999999997775"/>
-        <di:waypoint x="930" y="681"/>
+      <bpmndi:BPMNEdge id="edge_shape__C2482C78-5643-4A50-B124-66C736288F25_to_shape__091906AC-C013-4CE7-9D43-1F85EEA0E780" bpmnElement="_51AA3A41-4FDE-417E-88F0-9004507060A6">
+        <di:waypoint x="793" y="495"/>
+        <di:waypoint x="793" y="217"/>
+        <di:waypoint x="1255.25" y="217"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__C2482C78-5643-4A50-B124-66C736288F25_to_shape__136481F4-8785-4EF1-9BEA-65E525118299" bpmnElement="_9A47DC27-D2DE-42FA-A24F-77A44094D3FA">
         <di:waypoint x="793" y="495"/>
@@ -373,22 +373,22 @@
         <di:waypoint x="886.25" y="496.25"/>
         <di:waypoint x="933.5" y="495"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="edge_shape__C2482C78-5643-4A50-B124-66C736288F25_to_shape__091906AC-C013-4CE7-9D43-1F85EEA0E780" bpmnElement="_51AA3A41-4FDE-417E-88F0-9004507060A6">
-        <di:waypoint x="793" y="495"/>
-        <di:waypoint x="793" y="217"/>
-        <di:waypoint x="1255.25" y="217"/>
+      <bpmndi:BPMNEdge id="edge_shape__C2482C78-5643-4A50-B124-66C736288F25_to_shape__CD7CFF95-8D92-4F42-A794-04399EDE0CE0" bpmnElement="_6CE29E93-66F0-4BCC-BB8D-542FEA441582">
+        <di:waypoint x="793" y="523"/>
+        <di:waypoint x="793" y="680.9999999997775"/>
+        <di:waypoint x="930" y="681"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__136481F4-8785-4EF1-9BEA-65E525118299_to_shape__1B358012-BEE8-48E1-8618-C7A5A07E141C" bpmnElement="_26B16130-7E94-4DB5-A4FB-2027DB4E42FC">
         <di:waypoint x="1010.5" y="495"/>
         <di:waypoint x="1255" y="488.75"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="edge_shape__1B358012-BEE8-48E1-8618-C7A5A07E141C_to_shape__6BBD4095-A2B3-41D4-AE02-C12148D65E75" bpmnElement="_B3CAF3CC-7CF8-4A6E-8631-3B28F1D1230D">
-        <di:waypoint x="1311" y="488.75"/>
-        <di:waypoint x="1655" y="489"/>
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__1B358012-BEE8-48E1-8618-C7A5A07E141C_to_shape__091906AC-C013-4CE7-9D43-1F85EEA0E780" bpmnElement="_6C7298EE-4A73-4CE6-813A-40EFA7F2853F">
         <di:waypoint x="1283" y="488.75"/>
         <di:waypoint x="1283.25" y="245"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__1B358012-BEE8-48E1-8618-C7A5A07E141C_to_shape__6BBD4095-A2B3-41D4-AE02-C12148D65E75" bpmnElement="_B3CAF3CC-7CF8-4A6E-8631-3B28F1D1230D">
+        <di:waypoint x="1311" y="488.75"/>
+        <di:waypoint x="1655" y="489"/>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
@@ -487,7 +487,7 @@
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_d8ahAKZfED2oTNDym-qnug</bpmn2:source>
-    <bpmn2:target>_d8ahAKZfED2oTNDym-qnug</bpmn2:target>
+    <bpmn2:source>_sjW8QKZfED2q254pMQTffw</bpmn2:source>
+    <bpmn2:target>_sjW8QKZfED2q254pMQTffw</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
