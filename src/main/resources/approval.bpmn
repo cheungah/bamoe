@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_a7efkKZfED2oTNDym-qnug" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_d8ahAKZfED2oTNDym-qnug" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_approvalItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_applicantItem" structureRef="org.acme.cc_approval.model.Applicant"/>
   <bpmn2:itemDefinition id="_creditCardItem" structureRef="org.acme.cc_approval.model.CreditCard"/>
@@ -35,8 +35,8 @@
       <bpmn2:outMessageRef>_55E44BFD-93D1-4A12-94B2-7CFEFE0D6E09_OutMessage</bpmn2:outMessageRef>
     </bpmn2:operation>
   </bpmn2:interface>
-  <bpmn2:collaboration id="_D3D42AC4-177C-4026-AF84-151730EC1D13" name="Default Collaboration">
-    <bpmn2:participant id="_C85D4F4B-905E-4383-86CF-B4B41545367F" name="Pool Participant" processRef="approval"/>
+  <bpmn2:collaboration id="_EFF2A522-59A3-453F-96D2-6708AD80C3FD" name="Default Collaboration">
+    <bpmn2:participant id="_A780B8A7-394D-480D-A919-D8406B4EFFF5" name="Pool Participant" processRef="approval"/>
   </bpmn2:collaboration>
   <bpmn2:process id="approval" drools:packageName="com.example" drools:version="1.0" drools:adHoc="false" name="approval" isExecutable="true" processType="Public">
     <bpmn2:property id="approval" itemSubjectRef="_approvalItem" name="approval">
@@ -173,8 +173,12 @@
           <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[_136481F4-8785-4EF1-9BEA-65E525118299_SkippableInputX]]></bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:potentialOwner id="_a73hIKZfED2oTNDym-qnug">
-        <bpmn2:resourceAssignmentExpression id="_a74IMKZfED2oTNDym-qnug">
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_136481F4-8785-4EF1-9BEA-65E525118299_approvalOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>approval</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:potentialOwner id="_d8gnoKZfED2oTNDym-qnug">
+        <bpmn2:resourceAssignmentExpression id="_d8gnoaZfED2oTNDym-qnug">
           <bpmn2:formalExpression>jdoe</bpmn2:formalExpression>
         </bpmn2:resourceAssignmentExpression>
       </bpmn2:potentialOwner>
@@ -483,7 +487,7 @@
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_a7efkKZfED2oTNDym-qnug</bpmn2:source>
-    <bpmn2:target>_a7efkKZfED2oTNDym-qnug</bpmn2:target>
+    <bpmn2:source>_d8ahAKZfED2oTNDym-qnug</bpmn2:source>
+    <bpmn2:target>_d8ahAKZfED2oTNDym-qnug</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
