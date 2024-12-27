@@ -130,40 +130,40 @@
           <text></text>
         </annotationEntry>
       </rule>
-      <rule id="_09C5880C-180A-4758-B6CC-AC7BFC9E6297">
-        <inputEntry id="_D921E3F4-5E15-4C5B-AEE6-BC34C7E4494D">
+      <rule id="_951DA0BA-E60F-467D-A825-024F5377C5E3">
+        <inputEntry id="_ADD37DCE-24A2-4886-8AE1-2FAD4629F220">
           <text>false</text>
         </inputEntry>
-        <inputEntry id="_0A429580-6812-47CE-97B9-5CD91179CFDD">
+        <inputEntry id="_45F3D20E-7A42-449A-AF38-D3CA8A4D7395">
           <text>-</text>
         </inputEntry>
-        <inputEntry id="_6B74F6E8-DE7A-4A7A-BA68-8036DCDEE220">
-          <text>&gt;- 700</text>
+        <inputEntry id="_3BBB4310-4703-472A-B8B0-D4438997FBAF">
+          <text>&gt;= 700</text>
         </inputEntry>
-        <inputEntry id="_ACD47347-35CB-40E3-AD73-85BB33E606D1">
+        <inputEntry id="_A2580FCF-4A03-44ED-A1CC-70256695AD9F">
           <text>&gt;= 18</text>
         </inputEntry>
-        <outputEntry id="_226A927B-B24F-43F4-BF72-8AC58FAEE3F0">
+        <outputEntry id="_8E200E1B-AD8D-4313-B9A1-25DAFE959446">
           <text>80</text>
         </outputEntry>
         <annotationEntry>
           <text></text>
         </annotationEntry>
       </rule>
-      <rule id="_A8D04780-3F58-414B-AA08-7B9B50448531">
-        <inputEntry id="_77763E85-A40B-4491-87E9-EB7289325549">
+      <rule id="_09C5880C-180A-4758-B6CC-AC7BFC9E6297">
+        <inputEntry id="_D921E3F4-5E15-4C5B-AEE6-BC34C7E4494D">
           <text>true</text>
         </inputEntry>
-        <inputEntry id="_B4056E2F-C18A-4384-B61A-7882705AC8ED">
+        <inputEntry id="_0A429580-6812-47CE-97B9-5CD91179CFDD">
           <text>-</text>
         </inputEntry>
-        <inputEntry id="_8B7D73A1-149C-40CA-9521-22E283DE7511">
-          <text>&gt;- 550</text>
+        <inputEntry id="_6B74F6E8-DE7A-4A7A-BA68-8036DCDEE220">
+          <text>&gt;= 550</text>
         </inputEntry>
-        <inputEntry id="_7998B382-DABD-411A-AA59-67A4E0896E01">
+        <inputEntry id="_ACD47347-35CB-40E3-AD73-85BB33E606D1">
           <text>&gt;= 18</text>
         </inputEntry>
-        <outputEntry id="_81C6F9EC-BD8E-404C-972E-25F4212FE35B">
+        <outputEntry id="_226A927B-B24F-43F4-BF72-8AC58FAEE3F0">
           <text>70</text>
         </outputEntry>
         <annotationEntry>
