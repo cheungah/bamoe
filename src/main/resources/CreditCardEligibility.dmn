@@ -27,143 +27,143 @@
     <informationRequirement id="_E6372EA2-A083-4253-89C5-6139400008AC">
       <requiredInput href="#_9C70F987-F747-4651-A293-CCFF5B96DDC9" />
     </informationRequirement>
-    <decisionTable id="_5AF1D9B9-5C15-40EB-852A-605985B0107E" typeRef="number" hitPolicy="UNIQUE" label="Eligibility Score Calculation">
-      <input id="_0D60EAF3-BD3C-4907-A70C-F65A1839C8A8">
-        <inputExpression id="_274AA16A-4C1A-4E6A-BA7F-A7FF49AC56EF" typeRef="boolean">
+    <decisionTable id="_DC7529EF-0FAA-479D-AD5B-10C5196352BD" typeRef="number" hitPolicy="UNIQUE" label="Eligibility Score Calculation">
+      <input id="_54BF1134-1E02-4181-90C8-614252105EB4">
+        <inputExpression id="_DF4B03D6-B6F8-4364-92F4-38CA5C2EC7AF" typeRef="boolean">
           <text>Applicant.isStudent</text>
         </inputExpression>
       </input>
-      <input id="_B09ECFD6-B3C7-47A8-A2DD-32CB80807B4D">
-        <inputExpression id="_578AAB20-24AC-490B-97B1-C629D14238BD" typeRef="number">
+      <input id="_A7B320F0-A012-42E5-8D7F-465B76C8EB1B">
+        <inputExpression id="_814800B0-73B0-4D2B-86A3-4AE1EDA41A57" typeRef="number">
           <text>Applicant.annualIncome</text>
         </inputExpression>
       </input>
-      <input id="_38FEEC67-DBB9-4152-AF37-595BC03D8F60">
-        <inputExpression id="_0CEB073C-D925-46D8-A5B4-49453888B748" typeRef="number">
+      <input id="_C8F9F98F-9048-463F-892B-13FD944AC261">
+        <inputExpression id="_4EF0E707-BC31-44EC-97B7-9C149B57DBA2" typeRef="number">
           <text>Applicant.creditScore</text>
         </inputExpression>
       </input>
-      <input id="_479C5E67-4EE1-43C0-A447-8C91AC28A1E8">
-        <inputExpression id="_A474BB9A-51A4-4134-9050-8D2432E85BB5" typeRef="number">
+      <input id="_14CD7276-9252-43FB-8800-FBD4AB9FFD8D">
+        <inputExpression id="_BCBC93DA-BBAE-43E1-99BD-C4AF5EEA20E0" typeRef="number">
           <text>Applicant.age</text>
         </inputExpression>
       </input>
-      <output id="_A7F721FF-5051-4522-8961-3344380C908B" name="Output-1" />
+      <output id="_62EDAE04-D8BA-46AC-A8C1-9877484F14A1" name="Output-1" />
       <annotation name="Annotations" />
-      <rule id="_54993E91-FEBC-422B-B0FF-941D262E075C">
-        <inputEntry id="_4C43E710-2D80-45DB-9F4E-2F1CD6F52470">
+      <rule id="_F1E5C2B2-FB57-46D8-B411-B0A5DA6C89DA">
+        <inputEntry id="_82BD60C9-061E-4CDE-8D08-C9F3EE4EBF75">
           <text>-</text>
         </inputEntry>
-        <inputEntry id="_5123A11A-0FD2-4604-9365-13E88C7443B1">
+        <inputEntry id="_F9A2FA63-F32E-4F04-B4DE-1ADF393803AE">
           <text>-</text>
         </inputEntry>
-        <inputEntry id="_F32D656D-A3D5-43EE-9B30-1C26B6759E92">
+        <inputEntry id="_5B341010-3819-40AF-B10A-7CDE104355B7">
           <text>-</text>
         </inputEntry>
-        <inputEntry id="_91B227C7-4D99-4202-9938-7B9D9433C90A">
+        <inputEntry id="_F305C2CB-2F86-4391-AFCB-0E5ABE41E697">
           <text>&lt; 18</text>
         </inputEntry>
-        <outputEntry id="_7C88EA1A-8910-4585-A19C-9F0611E65E22">
+        <outputEntry id="_1AA784EC-EFEF-48C5-B035-AA8F705E789A">
           <text>0</text>
         </outputEntry>
         <annotationEntry>
           <text>// Your annotations here</text>
         </annotationEntry>
       </rule>
-      <rule id="_AB8072F3-B0C4-49F4-A83A-5C1CF5FC92B3">
-        <inputEntry id="_AC9F7385-CAA1-47E5-8338-C9EA64E61AA0">
+      <rule id="_3F514E01-D9CD-4AFC-B94E-5C93F20235BC">
+        <inputEntry id="_CE7DFF00-1EEC-4AA6-8673-E543F34BB942">
           <text>-</text>
         </inputEntry>
-        <inputEntry id="_D030776D-ADFF-44EE-9367-BEAE98D473CC">
+        <inputEntry id="_08F31EA3-135D-4A7F-A6EA-BF12341D5F3B">
           <text>-</text>
         </inputEntry>
-        <inputEntry id="_F6F14187-C650-46DA-BBC1-AE36214AE6DB">
+        <inputEntry id="_DCAEB0C7-5033-4939-AE44-86F4EBE231A9">
           <text>&lt; 550</text>
         </inputEntry>
-        <inputEntry id="_41807CCE-C77F-4999-9494-CF889051EEED">
+        <inputEntry id="_A86DF4D4-444D-47A5-94C1-3361949BB99A">
           <text>&gt;= 18</text>
         </inputEntry>
-        <outputEntry id="_C7B62AAA-4060-4504-95F0-A28436C643E8">
+        <outputEntry id="_59B91FE0-512D-4320-AA62-EBFCCA7D4EE7">
           <text>20</text>
         </outputEntry>
         <annotationEntry>
           <text></text>
         </annotationEntry>
       </rule>
-      <rule id="_A82A95DC-0F8C-4324-B0A5-7B8EC8C6DFC0">
-        <inputEntry id="_63CB429A-63E1-4CEA-B49A-D1802B12AE00">
+      <rule id="_3A9AC824-32A2-46C1-AA8C-9AD59DA8396E">
+        <inputEntry id="_B0B2EC9F-195B-4CB1-BC1D-20EC0DF1DEF7">
           <text>false</text>
         </inputEntry>
-        <inputEntry id="_BD7946E7-EFD1-46E5-84B5-862180587DC6">
+        <inputEntry id="_CF934031-64A8-432D-B82B-9828C4066961">
           <text>&lt; 20000</text>
         </inputEntry>
-        <inputEntry id="_6A3E9CC6-1CBB-4E84-AA1D-0DD0D5DE24A0">
+        <inputEntry id="_01C34BB7-9111-4631-A554-50B9BC768EA3">
           <text>[550..700)</text>
         </inputEntry>
-        <inputEntry id="_06282E77-9275-4DBA-8E02-E2CA378FBB39">
+        <inputEntry id="_10641837-CD21-4798-89F1-231FCBB0C6DF">
           <text>&gt;= 18</text>
         </inputEntry>
-        <outputEntry id="_8E8D380F-F0E5-4F44-86DF-69AF64B4E2F0">
+        <outputEntry id="_116B0840-0950-43EC-8A09-8B566533BE46">
           <text>40</text>
         </outputEntry>
         <annotationEntry>
           <text></text>
         </annotationEntry>
       </rule>
-      <rule id="_5C6450E9-EDF7-4C2F-849F-AB59DFCD3BB9">
-        <inputEntry id="_817460B6-1AE8-49CA-9528-CB7926F86BD0">
+      <rule id="_72A432D9-C806-4CF7-B441-5B8D5C4347A3">
+        <inputEntry id="_615926C4-95F3-4F7D-8B57-2DB2640AC70E">
           <text>false</text>
         </inputEntry>
-        <inputEntry id="_97A1D101-63EA-41CF-8F98-F736AFB272DB">
+        <inputEntry id="_82BC79DD-C854-429B-A81C-77035094C5EE">
           <text>&gt;= 20000</text>
         </inputEntry>
-        <inputEntry id="_E18938B2-BEC3-4694-B306-289C5404B2D4">
+        <inputEntry id="_14EA559C-CE4F-478F-9F2E-F748C426A0B6">
           <text>[550..700)</text>
         </inputEntry>
-        <inputEntry id="_E2F8E1E3-ABED-4A68-AE52-E6C49B7FF9BD">
+        <inputEntry id="_AD2B4B87-3A7F-4D3D-BF9C-0ACE5DCC3317">
           <text>&gt;= 18</text>
         </inputEntry>
-        <outputEntry id="_470C3143-C880-4FF6-A47F-1481E85CFDC5">
+        <outputEntry id="_E8A44E47-B5B9-4801-92C2-8A9DD035D41F">
           <text>60</text>
         </outputEntry>
         <annotationEntry>
           <text></text>
         </annotationEntry>
       </rule>
-      <rule id="_69BC4AB6-A271-49D6-9F66-91886106FF5C">
-        <inputEntry id="_C87DFE14-8EB4-48EE-86B8-E329693A8591">
+      <rule id="_09C5880C-180A-4758-B6CC-AC7BFC9E6297">
+        <inputEntry id="_D921E3F4-5E15-4C5B-AEE6-BC34C7E4494D">
           <text>false</text>
         </inputEntry>
-        <inputEntry id="_E19EEF75-90B9-43FC-9624-79CD753822B5">
+        <inputEntry id="_0A429580-6812-47CE-97B9-5CD91179CFDD">
           <text>-</text>
         </inputEntry>
-        <inputEntry id="_94E5A33E-5496-4B38-8A96-3881C90F2B10">
-          <text>&gt;= 700</text>
+        <inputEntry id="_6B74F6E8-DE7A-4A7A-BA68-8036DCDEE220">
+          <text>&gt;- 700</text>
         </inputEntry>
-        <inputEntry id="_710057A7-1458-4278-BF8D-A2BD453EDFA4">
+        <inputEntry id="_ACD47347-35CB-40E3-AD73-85BB33E606D1">
           <text>&gt;= 18</text>
         </inputEntry>
-        <outputEntry id="_6EA6C8D5-89EF-483D-85DA-BB1132F9147B">
+        <outputEntry id="_226A927B-B24F-43F4-BF72-8AC58FAEE3F0">
           <text>80</text>
         </outputEntry>
         <annotationEntry>
           <text></text>
         </annotationEntry>
       </rule>
-      <rule id="_2D5948A9-20F2-46B6-A47E-19C1B5E9D5F0">
-        <inputEntry id="_44027F8B-7E6F-470C-ACC4-121B72017566">
+      <rule id="_A8D04780-3F58-414B-AA08-7B9B50448531">
+        <inputEntry id="_77763E85-A40B-4491-87E9-EB7289325549">
           <text>true</text>
         </inputEntry>
-        <inputEntry id="_91CE0D32-21B4-4B5F-8B88-D6C6B01AF0B8">
+        <inputEntry id="_B4056E2F-C18A-4384-B61A-7882705AC8ED">
           <text>-</text>
         </inputEntry>
-        <inputEntry id="_309F0C9D-1A3B-4B92-9A01-0510E357EB0A">
-          <text>&gt;= 550</text>
+        <inputEntry id="_8B7D73A1-149C-40CA-9521-22E283DE7511">
+          <text>&gt;- 550</text>
         </inputEntry>
-        <inputEntry id="_3062AEDC-4F97-4725-8571-1993433A2604">
+        <inputEntry id="_7998B382-DABD-411A-AA59-67A4E0896E01">
           <text>&gt;= 18</text>
         </inputEntry>
-        <outputEntry id="_61CD7BFB-A753-4A2A-80C8-64E76D37B412">
+        <outputEntry id="_81C6F9EC-BD8E-404C-972E-25F4212FE35B">
           <text>70</text>
         </outputEntry>
         <annotationEntry>
@@ -244,6 +244,15 @@ else &quot;approved&quot;</text>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_E7164B4C-59D6-412F-BD38-12B652662D1B">
             <kie:width>708</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_DC7529EF-0FAA-479D-AD5B-10C5196352BD">
+            <kie:width>60</kie:width>
+            <kie:width>135</kie:width>
+            <kie:width>154</kie:width>
+            <kie:width>148</kie:width>
+            <kie:width>118</kie:width>
+            <kie:width>118</kie:width>
+            <kie:width>240</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
